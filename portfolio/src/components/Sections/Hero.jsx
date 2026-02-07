@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FaArrowDown } from 'react-icons/fa';
 import Button from '../UI/Button';
+import Badge from '../Three/Badge';
 
 const Hero = () => {
   const scrollToAbout = () => {
