@@ -1,12 +1,12 @@
 // src/components/Layout/Header.jsx
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // Changed to false initially
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -33,6 +33,11 @@ const Header = () => {
     }
   }, [darkMode]);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -44,11 +49,16 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
-              <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover rounded-full" />
+              <img 
+                src="/profile.jpg" 
+                alt="Profile" 
+                className="w-full h-full object-cover rounded-full"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%236366f1'/%3E%3C/svg%3E";
+                }}
+              />
             </div>
-            {/* <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Portfolio
-            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -96,7 +106,7 @@ const Header = () => {
               className="hidden md:inline-flex items-center px-4 py-2 rounded-lg gradient-bg text-white font-semibold hover:shadow-lg transition-all"
             >
               Download CV
-            </a>  
+            </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -114,35 +124,50 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <motion.div
-          initial={false}
-          animate={mobileMenuOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-          className="md:hidden overflow-hidden"
-        >
-          <div className="py-4 space-y-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block px-4 py-3 rounded-lg transition-colors ${
-                  location.pathname === item.path
-                    ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-800'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <a
-              href="/resume.pdf"
-              download
-              className="block px-4 py-3 rounded-lg gradient-bg text-white font-semibold text-center"
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden overflow-hidden"
             >
-              Download Resume
-            </a>
-          </div>
-        </motion.div>
+              <div className="py-4 mt-2 rounded-xl bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg border border-gray-200 dark:border-gray-800">
+                <div className="space-y-1">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg transition-all mx-2 ${
+                        location.pathname === item.path
+                          ? 'bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 text-blue-600 dark:text-blue-400 border-l-4 border-blue-500 dark:border-blue-400'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50'
+                      }`}
+                    >
+                      {item.name}
+                      {location.pathname === item.path && (
+                        <motion.div
+                          layoutId="mobile-navbar-indicator"
+                          className="w-1 h-1 rounded-full bg-blue-500 dark:bg-blue-400 ml-2 inline-block"
+                        />
+                      )}
+                    </Link>
+                  ))}
+                  <a
+                    href="/resume.pdf"
+                    download
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block mx-2 px-4 py-3 rounded-lg gradient-bg text-white font-semibold text-center hover:shadow-lg transition-all"
+                  >
+                    Download Resume
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
