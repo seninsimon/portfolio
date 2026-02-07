@@ -141,17 +141,17 @@ const Skills = () => {
           color: "text-red-600",
         },
         {
-          name: "AWS (S3, Basics)",
+          name: "AWS (S3, EC2, Basics)",
           icon: <FaAws />,
           tag: "Used in Projects",
           color: "text-orange-500",
         },
-        {
-          name: "Figma",
-          icon: <FaFigma />,
-          tag: "UI Reference",
-          color: "text-purple-500",
-        },
+        // {
+        //   name: "Figma",
+        //   icon: <FaFigma />,
+        //   tag: "UI Reference",
+        //   color: "text-purple-500",
+        // },
       ],
     },
   ];

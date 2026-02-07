@@ -54,7 +54,7 @@ const Hero = () => {
               visually appealing, and responsive. Let's bring your ideas to life!
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex  gap-4">
               <Button 
                 size="large"
                 onClick={() => window.open('/contact', '_self')}
