@@ -1,4 +1,4 @@
-// tailwind.config.js
+// tailwind.config.js - Add performance optimizations
 module.exports = {
   content: [
     "./index.html",
@@ -24,6 +24,7 @@ module.exports = {
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'gradient': 'gradient 8s linear infinite',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -40,7 +41,16 @@ module.exports = {
             'background-position': 'right center'
           }
         }
-      }
+      },
+      // Performance optimizations
+      screens: {
+        'xs': '475px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
     },
   },
   plugins: [],

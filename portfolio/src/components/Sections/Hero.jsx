@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FaArrowDown } from 'react-icons/fa';
 import Button from '../UI/Button';
+import Badge from '../Three/Badge';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -86,25 +87,9 @@ const Hero = () => {
                 <div className="w-full h-full rounded-full gradient-bg blur-3xl opacity-30" />
               </div>
               
-              {/* Profile Image Placeholder */}
-              <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-1">
-                <div className="bg-gray-900 rounded-2xl p-8">
-                  <div className="aspect-square rounded-2xl bg-gradient-to-tr from-blue-400 to-purple-500 flex items-center justify-center">
-                    <span className="text-6xl font-bold text-white">JD</span>
-                  </div>
-                  
-                  {/* Floating Elements */}
-                  <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ repeat: Infinity, duration: 3 }}
-                    className="absolute -top-4 -left-4 w-20 h-20 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-500/30"
-                  />
-                  <motion.div
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{ repeat: Infinity, duration: 3, delay: 1 }}
-                    className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full bg-purple-500/20 backdrop-blur-sm border border-purple-500/30"
-                  />
-                </div>
+              {/* 3D Badge Animation */}
+              <div className="relative w-full h-[300px] md:h-[500px] flex items-center justify-center">
+                 <Badge />
               </div>
             </div>
           </motion.div>

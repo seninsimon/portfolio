@@ -49,3 +49,56 @@
     @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
   }
 }
+
+/* Responsive Utilities */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+  
+  .mobile-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .badge-container {
+    transform: scale(0.9);
+  }
+}
+
+@media (min-width: 1536px) {
+  .badge-container {
+    transform: scale(1.1);
+  }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  button, 
+  .clickable {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+}
