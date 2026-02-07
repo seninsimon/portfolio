@@ -43,8 +43,8 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">P</span>
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/20">
+              <img src="/images/dp.jpg" alt="Profile" className="w-full h-full object-cover" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Portfolio
