@@ -12,11 +12,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <FaGithub />, href: 'https://github.com', label: 'GitHub' },
-    { icon: <FaLinkedin />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <FaTwitter />, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: <FaCodepen />, href: 'https://codepen.io', label: 'CodePen' },
-    { icon: <FaEnvelope />, href: 'mailto:contact@example.com', label: 'Email' },
+    { icon: <FaGithub />, href: 'https://github.com/seninsimon', label: 'GitHub' },
+    { icon: <FaLinkedin />, href: 'https://www.linkedin.com/in/senin-simon/', label: 'LinkedIn' },
+    // { icon: <FaTwitter />, href: 'https://twitter.com', label: 'Twitter' },
+    // { icon: <FaCodepen />, href: 'https://codepen.io', label: 'CodePen' },
+    { icon: <FaEnvelope />, href: 'mailto:seninsimon002@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -27,9 +27,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
-                <span className="text-white font-bold">P</span>
+                <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover rounded-full" />
               </div>
-              <span className="text-xl font-bold text-white">Portfolio</span>
+              {/* <span className="text-xl font-bold text-white">Portfolio</span> */}
             </div>
             <p className="text-gray-400 mb-4">
               A showcase of my work, skills, and professional journey.
@@ -78,27 +78,55 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Get In Touch</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <FaEnvelope />
-                <span>contact@example.com</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <FaGithub />
-                <span>github.com/username</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <FaLinkedin />
-                <span>linkedin.com/in/username</span>
-              </li>
-            </ul>
-          </div>
+         <div>
+  <h3 className="text-white font-semibold text-lg mb-4">
+    Get In Touch
+  </h3>
+
+  <ul className="space-y-2">
+    {/* Email */}
+    <li className="flex items-center space-x-2">
+      <FaEnvelope />
+      <a
+        href="mailto:seninsimon002@gmail.com"
+        className="hover:underline text-gray-200 hover:text-white transition"
+      >
+        seninsimon002@gmail.com
+      </a>
+    </li>
+
+    {/* GitHub */}
+    <li className="flex items-center space-x-2">
+      <FaGithub />
+      <a
+        href="https://github.com/seninsimon"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline text-gray-200 hover:text-white transition"
+      >
+        github.com/seninsimon
+      </a>
+    </li>
+
+    {/* LinkedIn */}
+    <li className="flex items-center space-x-2">
+      <FaLinkedin />
+      <a
+        href="https://www.linkedin.com/in/senin-simon/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline text-gray-200 hover:text-white transition"
+      >
+        linkedin.com/in/seninsimon
+      </a>
+    </li>
+  </ul>
+</div>
+
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-          <p>&copy; {currentYear} Portfolio. All rights reserved.</p>
+          <p>&copy; {currentYear} Senin. All rights reserved.</p>
           <p className="mt-2 text-sm">Built with React & Tailwind CSS</p>
         </div>
       </div>

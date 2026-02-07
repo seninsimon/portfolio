@@ -13,50 +13,48 @@ import Button from '../UI/Button';
 
 const Resume = () => {
   const experiences = [
-    {
-      year: '2022 - Present',
-      title: 'Senior Frontend Developer',
-      company: 'Tech Corp Inc.',
-      description: 'Led development of responsive web applications using React and TypeScript.',
-      icon: <FaBriefcase />,
-    },
-    {
-      year: '2020 - 2022',
-      title: 'Full Stack Developer',
-      company: 'Startup XYZ',
-      description: 'Built full-stack applications with React, Node.js, and MongoDB.',
-      icon: <FaCode />,
-    },
-    {
-      year: '2018 - 2020',
-      title: 'Web Developer',
-      company: 'Digital Agency',
-      description: 'Developed client websites and e-commerce platforms.',
-      icon: <FaTools />,
-    },
-  ];
+  {
+    year: "2025 - Present",
+    title: "Full Stack Developer",
+    company: "Ociuz Technologies",
+    description:
+      "Working on full-stack applications using React, Django, PostgreSQL, and building real-world business solutions.",
+    icon: <FaBriefcase />,
+  },
+  {
+    year: "2025",
+    title: "Backend Developer (Node.js)",
+    company: "Woxro, Infopark Koratty",
+    description:
+      "Contributed to backend development and API integration for an event management platform using Node.js and MongoDB.",
+    icon: <FaCode />,
+  },
+  {
+    year: "2024 - 2025",
+    title: "Full Stack Developer Intern",
+    company: "Brototype",
+    description:
+      "Built multiple projects while strengthening skills in MERN stack, authentication systems, and scalable backend development.",
+    icon: <FaTools />,
+  },
+];
 
-  const education = [
-    {
-      year: '2014 - 2018',
-      degree: 'Bachelor of Science',
-      institution: 'University of Technology',
-      description: 'Computer Science Major',
-      icon: <FaGraduationCap />,
-    },
-    {
-      year: '2019',
-      degree: 'Full Stack Development',
-      institution: 'Coding Bootcamp',
-      description: 'MERN Stack Certification',
-      icon: <FaCertificate />,
-    },
-  ];
+const education = [
+  {
+    year: "2020 - 2024",
+    degree: "B.Tech Computer Science Engineering",
+    institution: "IES College of Engineering",
+    description:
+      "Studied core computer science fundamentals and developed strong interest in web development and backend systems.",
+    icon: <FaGraduationCap />,
+  },
+];
+
 
   const skills = [
     'React', 'TypeScript', 'Next.js', 'Node.js', 'Express', 'MongoDB',
-    'PostgreSQL', 'GraphQL', 'Tailwind CSS', 'Framer Motion', 'AWS',
-    'Docker', 'Git', 'CI/CD', 'Jest', 'Cypress'
+    'PostgreSQL', 'Tailwind CSS', 'AWS', 'nest.js', 'Django','google-cloud',
+    'Docker-beginner', 'Git', 'github-actions'
   ];
 
   return (

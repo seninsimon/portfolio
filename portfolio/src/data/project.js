@@ -1,82 +1,99 @@
-    // src/data/projects.js
+// src/data/projects.js
+
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured online shopping platform with real-time inventory management.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "fullstack",
-    technologies: ["React", "Node.js", "MongoDB", "Redux", "Stripe"],
-    tags: ["Full Stack", "E-commerce", "Payment Integration"],
+    title: "TaxTotal UK – HMRC PDF Data Automation",
+    description:
+      "Worked on a UK-based tax platform to populate HMRC data into structured PDFs using Django and Python.",
+    image:
+      "https://images.unsplash.com/photo-1581092919535-7146c9a9020c?auto=format&fit=crop&w=800&q=80",
+    category: "backend",
+    technologies: ["Django", "Python", "PostgreSQL"],
+    tags: ["PDF Generation", "HMRC", "Automation"],
     links: {
-      demo: "https://demo.example.com",
-      github: "https://github.com/username/ecommerce",
+      demo: null,
+      github: "https://github.com/seninsimon/hmrcTaxReturn",
     },
   },
+
   {
     id: 2,
-    title: "Task Management App",
-    description: "Collaborative task management application with drag & drop functionality.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "react",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "DnD Kit"],
-    tags: ["Frontend", "Productivity", "UI/UX"],
+    title: "AI Transaction Module – Bank Statement Extraction",
+    description:
+      "Built an AI-powered transaction module to extract data from bank statements and store structured entries in PostgreSQL.",
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
+    category: "ai",
+    technologies: ["Django", "PostgreSQL", "Gemini Flash 2.0"],
+    tags: ["AI Integration", "FinTech", "Data Extraction"],
     links: {
-      demo: "https://demo.example.com",
-      github: "https://github.com/username/taskmanager",
+      demo: null,
+      github: "https://github.com/seninsimon/bank-statement-extractor-AI-server",
     },
   },
+
   {
     id: 3,
-    title: "Fitness Tracking App",
-    description: "Mobile app for tracking workouts, nutrition, and progress.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "mobile",
-    technologies: ["React Native", "Firebase", "Chart.js", "Expo"],
-    tags: ["Mobile", "Health", "Firebase"],
+    title: "Trident Logistics – Advanced Data Table UI",
+    description:
+      "Implemented a full-featured Mantine React Table for managing and displaying large logistics datasets efficiently.",
+    image:
+      "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=800&q=80",
+    category: "frontend",
+    technologies: ["React", "Mantine UI", "TypeScript"],
+    tags: ["Tables", "UI Development", "Logistics"],
     links: {
-      demo: "https://demo.example.com",
-      github: "https://github.com/username/fitnessapp",
+      demo: "https://tridentlogisticsv2.vercel.app/",
+      github: "https://github.com/seninsimon/tridentlogisticsv2",
     },
   },
+
   {
     id: 4,
-    title: "Portfolio Website",
-    description: "Modern portfolio website with smooth animations and responsive design.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "react",
-    technologies: ["React", "Framer Motion", "Tailwind CSS", "Three.js"],
-    tags: ["Portfolio", "Animation", "Responsive"],
+    title: "Meridian Logistics & Customer Portal",
+    description:
+      "Developed a customer-facing portal for enquiries, quotation approvals, and logistics workflow tracking , also worked on admin side.",
+    image:
+      "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80",
+    category: "fullstack",
+    technologies: ["React", "SQL", "Django"],
+    tags: [ "Full Stack", "Business Workflow", "company project"],
     links: {
-      demo: "https://demo.example.com",
-      github: "https://github.com/username/portfolio",
+      demo: null,
+      github: null,
     },
   },
+
   {
     id: 5,
-    title: "Real-time Chat Application",
-    description: "Instant messaging app with voice and video call capabilities.",
-    image: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    title: "Bloom, Artisan – Ecommerce Platforms",
+    description:
+      "Full-stack ecommerce project with product listings, cart, checkout, and admin management features.",
+    image:
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80",
     category: "fullstack",
-    technologies: ["Socket.io", "Express", "React", "WebRTC"],
-    tags: ["Real-time", "WebSockets", "Video Chat"],
+    technologies: ["React", "Django", "SQL"],
+    tags: ["E-commerce", "Full Stack", "company project"],
     links: {
-      demo: "https://demo.example.com",
-      github: "https://github.com/username/chatapp",
+      demo: null,
+      github: null,
     },
   },
+
   {
     id: 6,
-    title: "Dashboard Analytics",
-    description: "Interactive dashboard for data visualization and business analytics.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "design",
-    technologies: ["Next.js", "D3.js", "Chart.js", "Material-UI"],
-    tags: ["Dashboard", "Analytics", "Data Visualization"],
+    title: "Event Management System – Woxro",
+    description:
+      "Worked on an event management platform with Next.js, Node.js, and MongoDB during my time at Woxro.",
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+    category: "fullstack",
+    technologies: ["Next.js", "Node.js", "MongoDB"],
+    tags: ["Events", "Company Project", "Web Platform"],
     links: {
-      demo: "https://demo.example.com",
-      github: "https://github.com/username/dashboard",
+      demo: null,
+      github: null,
     },
   },
-  // Add more projects as needed
 ];

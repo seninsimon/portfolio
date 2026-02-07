@@ -1,46 +1,66 @@
 // src/components/Sections/About.jsx
-import { motion } from 'framer-motion';
-import { 
-  FaCode, 
-  FaPalette, 
-  FaRocket, 
+import { motion } from "framer-motion";
+import {
+  FaCode,
+  FaPalette,
+  FaRocket,
   FaUsers,
   FaGraduationCap,
-  FaBriefcase
-} from 'react-icons/fa';
-import SectionTitle from '../UI/SectionTitle';
+  FaBriefcase,
+} from "react-icons/fa";
+import SectionTitle from "../UI/SectionTitle";
 
 const About = () => {
   const skills = [
-    { name: 'Frontend', level: 95, icon: <FaCode />, color: 'from-blue-500 to-cyan-500' },
-    { name: 'UI/UX Design', level: 85, icon: <FaPalette />, color: 'from-purple-500 to-pink-500' },
-    { name: 'Backend', level: 80, icon: <FaRocket />, color: 'from-green-500 to-emerald-500' },
-    { name: 'Team Collaboration', level: 90, icon: <FaUsers />, color: 'from-orange-500 to-red-500' },
+    {
+      name: "Frontend",
+      level: 80,
+      icon: <FaCode />,
+      color: "from-blue-500 to-cyan-500",
+    },
+    // {
+    //   name: "UI/UX Design",
+    //   level: 85,
+    //   icon: <FaPalette />,
+    //   color: "from-purple-500 to-pink-500",
+    // },
+    {
+      name: "Backend",
+      level: 90,
+      icon: <FaRocket />,
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      name: "Team Collaboration",
+      level: 90,
+      icon: <FaUsers />,
+      color: "from-orange-500 to-red-500",
+    },
   ];
 
   const timeline = [
     {
-      year: '2022 - Present',
-      title: 'Senior Frontend Developer',
-      company: 'Tech Corp Inc.',
+      year: "2025 - Present",
+      title: "full stack Developer",
+      company: "Ociuz Technologies",
       icon: <FaBriefcase />,
     },
     {
-      year: '2020 - 2022',
-      title: 'Full Stack Developer',
-      company: 'Startup XYZ',
-      icon: <FaCode />,
+      year: "2025",
+      title: "backend developer (nodejs)",
+      company: "Woxro korraty infopark",
+      icon: <FaBriefcase />,
     },
     {
-      year: '2018 - 2020',
-      title: 'Web Developer',
-      company: 'Digital Agency',
-      icon: <FaPalette />,
+      year: "2024 - 2025",
+      title: "full stack developer(internship)",
+      company: "Brototype",
+      icon: <FaBriefcase />,
     },
     {
-      year: '2014 - 2018',
-      title: 'Computer Science',
-      company: 'University of Tech',
+      year: "2020 - 2024",
+      title: "Computer Science Engineering",
+      company: "IES College of Engineering ",
       icon: <FaGraduationCap />,
     },
   ];
@@ -48,11 +68,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900/50">
       <div className="container mx-auto px-6">
-        <SectionTitle
-          title="About Me"
-          subtitle="Get to know me"
-          centered
-        />
+        <SectionTitle title="About Me" centered />
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left Column - Bio */}
@@ -63,38 +79,59 @@ const About = () => {
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Passionate Developer Creating Digital Solutions
+              Full-Stack Developer Building Real-World Web Apps
             </h3>
-            
+
             <p className="text-gray-600 dark:text-gray-300">
-              With over 5 years of experience in web development, I specialize in creating 
-              responsive, performant, and accessible web applications. My passion lies in 
-              turning complex problems into simple, beautiful designs.
+              I'm a software developer who enjoys building modern, responsive,
+              and scalable web applications. I’ve worked with technologies like
+              React, Node.js, Django, Next.js, NestJS, MongoDB, and PostgreSQL
+              to create practical solutions for real-world problems.
             </p>
-            
+
             <p className="text-gray-600 dark:text-gray-300">
-              I believe in writing clean, efficient code and staying up-to-date with the 
-              latest technologies. When I'm not coding, you can find me contributing to 
-              open-source projects or learning new frameworks.
+              Right now, I’m exploring deeper backend concepts like
+              microservices, system design, and Go. I like learning by building
+              projects, experimenting with new tools, and improving step by step
+              as a developer.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
               <div className="text-center p-4 rounded-lg bg-white dark:bg-gray-800 shadow">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
-                <div className="text-gray-600 dark:text-gray-400">Projects</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                  15+
+                </div>
+                <div className="text-gray-600 dark:text-gray-400">
+                  Projects Built
+                </div>
               </div>
+
               <div className="text-center p-4 rounded-lg bg-white dark:bg-gray-800 shadow">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">5+</div>
-                <div className="text-gray-600 dark:text-gray-400">Years Experience</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                  2+
+                </div>
+                <div className="text-gray-600 dark:text-gray-400">
+                  Years of Learning & Development
+                </div>
               </div>
+
               <div className="text-center p-4 rounded-lg bg-white dark:bg-gray-800 shadow">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">100%</div>
-                <div className="text-gray-600 dark:text-gray-400">Client Satisfaction</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                  5+
+                </div>
+                <div className="text-gray-600 dark:text-gray-400">
+                  Tech Stacks Used
+                </div>
               </div>
+
               <div className="text-center p-4 rounded-lg bg-white dark:bg-gray-800 shadow">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">24/7</div>
-                <div className="text-gray-600 dark:text-gray-400">Availability</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                  ∞
+                </div>
+                <div className="text-gray-600 dark:text-gray-400">
+                  Always Learning
+                </div>
               </div>
             </div>
           </motion.div>
@@ -104,35 +141,36 @@ const About = () => {
             {/* Skills */}
             <div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                My Skills
+                Skills
               </h3>
-              <div className="space-y-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {skills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="space-y-2"
+                    transition={{ delay: index * 0.05 }}
+                    className="flex items-center gap-3 p-3 rounded-lg
+                 border border-gray-200 dark:border-gray-700
+                 bg-white dark:bg-gray-900
+                 hover:shadow-sm transition"
                   >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <span className="text-blue-600 dark:text-blue-400">
-                          {skill.icon}
-                        </span>
-                        <span className="font-medium">{skill.name}</span>
-                      </div>
-                      <span className="text-sm font-semibold">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: index * 0.1 }}
-                        className={`h-full bg-gradient-to-r ${skill.color}`}
-                      />
+                    {/* Icon */}
+                    <span className={`text-lg ${skill.color}`}>
+                      {skill.icon}
+                    </span>
+
+                    {/* Name */}
+                    <div>
+                      <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                        {skill.name}
+                      </p>
+
+                      {/* Tag instead of % */}
+                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                        {skill.tag}
+                      </p>
                     </div>
                   </motion.div>
                 ))}

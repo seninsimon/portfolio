@@ -27,8 +27,8 @@ const Hero = () => {
             </p>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              John
-              <span className="text-blue-600 dark:text-blue-400"> Doe</span>
+              Senin
+              <span className="text-blue-600 dark:text-blue-400"> Simon</span>
             </h1>
             
             <div className="text-2xl md:text-3xl font-semibold mb-6 h-12">
@@ -36,8 +36,7 @@ const Hero = () => {
                 sequence={[
                   'Full Stack Developer',
                   2000,
-                  'UI/UX Designer',
-                  2000,
+  
                   'Problem Solver',
                   2000,
                   'Tech Enthusiast',
@@ -90,7 +89,7 @@ const Hero = () => {
               <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-1">
                 <div className="bg-gray-900 rounded-2xl p-8">
                   <div className="aspect-square rounded-2xl bg-gradient-to-tr from-blue-400 to-purple-500 flex items-center justify-center">
-                    <span className="text-6xl font-bold text-white">JD</span>
+                    <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover rounded-2xl" />
                   </div>
                   
                   {/* Floating Elements */}

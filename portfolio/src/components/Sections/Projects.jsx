@@ -21,11 +21,11 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900/50">
-      <div className="container mx-auto px-6">
+    <section id="projects" className=" bg-gray-50 dark:bg-gray-900/50">
+      <div className="container mx-auto px-6 py-15">
         <SectionTitle
           title="Featured Projects"
-          subtitle="My Recent Work"
+          // subtitle="Works that i have done"
           centered
         />
 
@@ -61,7 +61,7 @@ const Projects = () => {
                 <Card
                   title={project.title}
                   description={project.description}
-                  image={project.image}
+                  // image={project.image}
                   tags={project.tags}
                   links={project.links}
                 >

@@ -8,7 +8,8 @@ import {
   FaMapMarkerAlt,
   FaLinkedin,
   FaGithub,
-  FaTwitter 
+  FaTwitter, 
+  FaInstagram
 } from 'react-icons/fa';
 import SectionTitle from '../UI/SectionTitle';
 import Button from '../UI/Button';
@@ -61,27 +62,27 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: 'Email',
-      details: 'contact@example.com',
-      link: 'mailto:contact@example.com',
+      details: 'seninsimon002@gmail.com',
+      link: 'mailto:seninsimon002',
     },
     {
       icon: <FaPhone />,
       title: 'Phone',
-      details: '+1 (123) 456-7890',
-      link: 'tel:+11234567890',
+      details: '+91 6238951920',
+      link: 'tel:+916238951920',
     },
     {
       icon: <FaMapMarkerAlt />,
       title: 'Location',
-      details: 'San Francisco, CA',
+      details: 'kerala, India',
     },
   ];
 
   const socialLinks = [
-    { icon: <FaGithub />, href: 'https://github.com', label: 'GitHub' },
-    { icon: <FaLinkedin />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <FaTwitter />, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: <FaEnvelope />, href: 'mailto:contact@example.com', label: 'Email' },
+    { icon: <FaGithub />, href: 'https://github.com/seninsimon', label: 'GitHub' },
+    { icon: <FaLinkedin />, href: 'https://www.linkedin.com/in/senin-simon/', label: 'LinkedIn' },
+    { icon: <FaInstagram />, href: 'https://www.instagram.com/senin_simon/', label: 'Instagram' },
+    { icon: <FaEnvelope />, href: 'mailto:seninsimon002@gmail.com', label: 'Email' },
   ];
 
   return (

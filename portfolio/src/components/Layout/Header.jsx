@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -44,11 +44,11 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">P</span>
+              <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover rounded-full" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            {/* <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Portfolio
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -96,7 +96,7 @@ const Header = () => {
               className="hidden md:inline-flex items-center px-4 py-2 rounded-lg gradient-bg text-white font-semibold hover:shadow-lg transition-all"
             >
               Download CV
-            </a>
+            </a>  
 
             {/* Mobile Menu Button */}
             <button
