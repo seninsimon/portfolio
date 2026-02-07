@@ -36,6 +36,12 @@ const About = () => {
       icon: <FaUsers />,
       color: "from-orange-500 to-red-500",
     },
+    {
+      name: "Git & Github",
+      level: 95,
+      icon: <FaCode />,
+      color: "from-blue-500 to-cyan-500",
+    },
   ];
 
   const timeline = [
