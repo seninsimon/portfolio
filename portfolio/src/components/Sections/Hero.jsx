@@ -52,16 +52,13 @@ const Hero = () => {
             </div>
 
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-lg">
-              I build exceptional digital experiences that are fast, accessible,
-              visually appealing, and responsive. Let's bring your ideas to
-              life!
+              Building scalable full-stack web applications with clean design,
+              strong backend logic, and a constant drive to explore new
+              technologies.
             </p>
 
             <div className="flex  gap-4">
-              <Button
-                size="large"
-                onClick={() => navigate("/contact")}
-              >
+              <Button size="large" onClick={() => navigate("/contact")}>
                 Get In Touch
               </Button>
 
@@ -85,9 +82,9 @@ const Hero = () => {
               </div>
 
               {/* Profile Image Placeholder */}
-              <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-1">
+              <div className="relative bg-linear-to-br from-red-500 to-green-600 rounded-2xl p-1">
                 <div className="bg-gray-900 rounded-2xl p-8">
-                  <div className="aspect-square rounded-2xl bg-gradient-to-tr from-blue-400 to-purple-500 flex items-center justify-center">
+                  <div className="aspect-square rounded-2xl bg-linear-to-tr from-red-400 to-green-500 flex items-center justify-center">
                     <img
                       src="/profile.jpg"
                       alt="Profile"
