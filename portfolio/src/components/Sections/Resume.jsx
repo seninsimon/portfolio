@@ -62,17 +62,16 @@ const education = [
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
           <SectionTitle
-            title="My Resume"
-            subtitle="Professional Journey"
+            title="Professional Journey"
+            // subtitle="Professional Journey"
           />
           
           <Button
-            size="large"
+            size="medium"
             onClick={() => window.open('/resume.pdf', '_blank')}
             className="flex items-center space-x-2"
           >
-            <FaDownload />
-            <span>Download PDF</span>
+            <span>CV</span>
           </Button>
         </div>
 
