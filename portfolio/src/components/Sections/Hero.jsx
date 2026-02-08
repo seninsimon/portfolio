@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaArrowDown } from "react-icons/fa";
 import Button from "../UI/Button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const scrollToAbout = () => {
     document.getElementById("about").scrollIntoView({ behavior: "smooth" });
   };
@@ -58,7 +60,7 @@ const Hero = () => {
             <div className="flex  gap-4">
               <Button
                 size="large"
-                onClick={() => window.open("/contact", "_self")}
+                onClick={() => navigate("/contact")}
               >
                 Get In Touch
               </Button>
