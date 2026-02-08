@@ -8,9 +8,9 @@ import { projects } from '../../data/project';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
-  const [visibleProjects, setVisibleProjects] = useState(6);
+  const [visibleProjects, setVisibleProjects] = useState(7);
 
-  const categories = ['all', 'react', 'fullstack', 'mobile', 'design'];
+  const categories = ['all', 'frontend', 'fullstack', 'mobile'];
 
   const filteredProjects = projects.filter(project => 
     filter === 'all' || project.category === filter

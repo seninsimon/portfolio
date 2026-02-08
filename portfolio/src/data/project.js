@@ -96,4 +96,20 @@ export const projects = [
       github: null,
     },
   },
+
+  {
+    id: 7,
+    title: "task management system",
+    description:
+      "backend in golang and frontend in reactnative expored go repository patten ",
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+    category: "mobile",
+    technologies: ["golang", "reactnative", "gorm", "postgres", "gin"],
+    tags: ["side project", "go", "mobile"],
+    links: {
+      demo: null,
+      github: "https://github.com/seninsimon/go-task-manager",
+    },
+  },
 ];
